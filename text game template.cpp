@@ -7,14 +7,14 @@ class game{
 			string tutorial;
 			
 		public:
-			Game(){
+			game(){
 			}
 			
-			~Game(){
+			~game(){
 				cout<<"Ran destructor.";
 			}
 			
-			Ans(string a){
+			bool Ans(string a){
 				while(a[0]!='y'||a[0]!='n'||a[0]!='Y'||a[0]!='N'){
 	            	cout<<"Invalid response. Please enter (y)es or (n)o: ";
 	            	cin>>tutorial;
@@ -27,7 +27,7 @@ class game{
 				}
 			}
 			
-			Instruct()
+			void Instruct()
 			{
 			   cout<<"Your goal is to escape a room. The game progresses according to text commands entered by the player."
 				<<"\nThe verbs that trigger a response are:"
@@ -45,7 +45,7 @@ class game{
 				<<"\n The instructions ends here."<<endl;
 			}
 			
-			Intro(){
+			void Intro(){
 				cout<<"*****Room Without a Roof*****"<<endl;
 	            cout<<"18/11/2018, v.1.0"<<endl
 	            <<"Welcome. Do you wish to see the instructions? (y/n): ";
@@ -63,5 +63,3 @@ int main(){
    	game main;
    	main.Intro();
 	}
-	      
-
